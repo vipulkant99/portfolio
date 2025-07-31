@@ -26,7 +26,9 @@ function HeroSection() {
         <span className="pt-16 text-4xl">
           <ContainerTextFlip />
         </span>
-        <HeroButton />
+        <HeroButton className="px-8 py-2 mt-8 text-3xl">
+          Let's Explore
+        </HeroButton>
       </div>
       {/* <img
         src="/profile_pic.jpg"

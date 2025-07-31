@@ -2,6 +2,7 @@ import { AiOutlineTool } from "react-icons/ai";
 import { BsPersonCircle } from "react-icons/bs";
 import { TbTool } from "react-icons/tb";
 import { MovingCards } from "../Components/MovingCards";
+import { TechStacks } from "../../../util/constants";
 
 const testimonials = [
   {
@@ -36,73 +37,6 @@ const testimonials = [
 ];
 
 function AboutSection() {
-  const techstacks = [
-    {
-      name: "Dart",
-      src: "/techstack/dart.svg",
-    },
-    {
-      name: "Javascript",
-      src: "/techstack/js.svg",
-    },
-    {
-      name: "Python",
-      src: "/techstack/python.svg",
-    },
-    {
-      name: "HTML",
-      src: "/techstack/html.svg",
-    },
-    {
-      name: "CSS",
-      src: "/techstack/css.svg",
-    },
-    {
-      name: "Tailwind CSS",
-      src: "/techstack/tailwind.svg",
-    },
-    {
-      name: "Flutter",
-      src: "/techstack/flutter.svg",
-    },
-    {
-      name: "Node.js",
-      src: "/techstack/node.svg",
-    },
-    {
-      name: "Express.js",
-      src: "/techstack/expressjs.svg",
-    },
-    {
-      name: "React.js",
-      src: "/techstack/reactjs.svg",
-    },
-
-    {
-      name: "Mongo DB",
-      src: "/techstack/mongo.svg",
-    },
-    {
-      name: "MySQL",
-      src: "/techstack/sql.svg",
-    },
-    {
-      name: "Firebase",
-      src: "/techstack/firebase.svg",
-    },
-    {
-      name: "Supabase",
-      src: "/techstack/supabase.svg",
-    },
-    {
-      name: "Git",
-      src: "/techstack/git.svg",
-    },
-    {
-      name: "Github",
-      src: "/techstack/github.svg",
-    },
-  ];
   return (
     <div
       id="about"
@@ -144,8 +78,8 @@ function AboutSection() {
         <h3 className="font-space-grotesk text-2xl"> Github</h3>
       </div> */}
       <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden mt-10 w-fit mx-auto">
-        <MovingCards items={techstacks} direction="right" speed="medium" />
-        <MovingCards items={techstacks} direction="left" speed="medium" />
+        <MovingCards items={TechStacks} direction="right" speed="medium" />
+        <MovingCards items={TechStacks} direction="left" speed="medium" />
       </div>
     </div>
   );

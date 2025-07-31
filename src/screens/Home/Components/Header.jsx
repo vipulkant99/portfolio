@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Header() {
+export default function Header({ activeSection }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -12,6 +12,13 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navItemClass = (section) =>
+    `text-lg font-inter transition-colors duration-200 ${
+      activeSection === section
+        ? "text-white font-bold"
+        : "text-slate-400 hover:text-slate-100"
+    }`;
 
   return (
     <header
@@ -31,34 +38,19 @@ export default function Header() {
           Your Name
         </h1> */}
         <nav className="space-x-8">
-          <a
-            href="#about"
-            className="text-lg text-slate-400 hover:text-slate-100 font-inter"
-          >
+          <a href="#about" className={navItemClass("about")}>
             About
           </a>
-          <a
-            href="#education"
-            className="text-lg text-slate-400 hover:text-slate-100 font-inter"
-          >
+          <a href="#education" className={navItemClass("education")}>
             Education
           </a>
-          <a
-            href="#experience"
-            className="text-lg text-slate-400 hover:text-slate-100 font-inter"
-          >
+          <a href="#experience" className={navItemClass("experience")}>
             Experience
           </a>
-          <a
-            href="#projects"
-            className="text-lg text-slate-400 hover:text-slate-100 font-inter"
-          >
+          <a href="#projects" className={navItemClass("projects")}>
             Projects
           </a>
-          <a
-            href="#"
-            className="text-lg text-slate-400 hover:text-slate-100 font-inter"
-          >
+          <a href="#hero" className={navItemClass("hero")}>
             Contact
           </a>
         </nav>

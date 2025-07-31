@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-function HeroButton() {
+function HeroButton({ className, children, onClick }) {
   return (
     <motion.button
       whileHover={{
@@ -10,7 +10,7 @@ function HeroButton() {
         y: -20,
       }}
       whileTap={{
-        y: [0, 30, 25],
+        y: [0, 30],
       }}
       style={{
         translateZ: 100,
@@ -19,11 +19,12 @@ function HeroButton() {
         duration: 0.3,
         ease: "easeInOut",
       }}
-      className=" group relative text-neutral-500 px-12 py-4 rounded-lg mt-16 bg-black font-bold text-4xl 
-      shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_-1px_2px_0px_rgba(255,255,255,0.1)_inset]"
+      onClick={onClick}
+      className={`group relative text-neutral-500 rounded-lg  bg-black font-bold text-4xl 
+      shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_-1px_2px_0px_rgba(255,255,255,0.1)_inset] ${className}`}
     >
-      <span className="group-hover:text-cyan-300 transition-colors duration-300 text-3xl font-space-grotesk">
-        Let's Explore
+      <span className="group-hover:text-cyan-300 transition-colors duration-300 font-space-grotesk">
+        {children}
       </span>
       <span className="absolute inset-x-0 bottom-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent h-px w-3/4 mx-auto"></span>
       <span className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-x-0 bottom-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent h-[4px] w-full mx-auto blur-sm"></span>

@@ -1,55 +1,32 @@
 import { useState } from "react";
 import { RiBriefcase2Fill } from "react-icons/ri";
-
-const workTimeline = [
-  {
-    index: 0,
-    start: "2021",
-    time: "August 2021 - January 2022",
-    company: "Freelance",
-    title: "Mobile Application Developer",
-    content: [
-      "Designed and built a mobile app for IoT-based green roof plantation monitoring.",
-      "Integrated real-time sensor data (e.g., moisture, temperature) using Firebase Realtime Database.",
-      "Visualized live environmental metrics within the app through dynamic, user-friendly dashboards.",
-      "Implemented Firebase Authentication for secure, end-to-end access with email/password login and session handling.",
-    ],
-  },
-  {
-    index: 1,
-    start: "2022",
-    time: "February 2022 – February 2024",
-    company: "ESPARSE MATRIX SOLUTIONS PVT LTD",
-    title: "Junior Flutter Developer",
-    content: [
-      "Led end-to-end development of mobile applications integrating Firebase Authentication, Storage, and cloud functions.",
-      "Published and maintained 2+ apps on App Store and Google Play Store.",
-      "Integrated and prototyped Agora Video Calling API; discontinued due to technical challenges",
-      "Collaborated with backend teams to ensure seamless API integration and real-time data synchronization.",
-    ],
-  },
-];
+import HeroButton from "../Components/HeroButton";
+import { WorkTimeline } from "../../../util/constants";
 
 function WorkSection() {
   const [curretIndex, setCurrentIndex] = useState(null);
+
+  function handleClick(item) {
+    setCurrentIndex((index) => (item.index === index ? null : item.index));
+  }
   return (
     <div id="experience">
       {/* Work Experience */}
-      <div className="flex gap-8 items-center justify-start">
+      <div className="flex gap-8 items-center justify-center">
         {/* div Education */}
         <RiBriefcase2Fill size={64} color="white" />
         <h1 className="text-6xl underline text-slate-300  font-space-grotesk tracking-wide">
           Work Experience
         </h1>
       </div>
-      {workTimeline.map((item) => {
+      {WorkTimeline.map((item) => {
         return (
           <div className="relative mb-10 ml-4 flex items-start mt-16">
             <div className="absolute -left-30 -top-2 text-3xl text-right w-12 font-semibold text-stone-200">
               {item.start}
             </div>
             <div className="absolute w-3 h-3 bg-[#4f46e5] rounded-full -left-12 top-1.5" />
-            <div className="pl-6 border border-stone-100 py-4 px-8 rounded-lg max-w-[1200px] w-screen">
+            <div className="pl-6 border border-neutral-100 py-4 px-8 rounded-2xl max-w-[800px] w-screen shadow-lg shadow-neutral-100/50">
               <h3 className="m-0 text-3xl tracking-wide font-bold text-stone-300">
                 {item.title}
               </h3>
@@ -57,16 +34,18 @@ function WorkSection() {
                 <p className="my-1 text-lg text-gray-200">
                   {item.company}, {item.time}
                 </p>
-                <button
-                  className="bg-cyan-300 text-stone-900 rounded-full px-4 py-2"
-                  onClick={() =>
-                    setCurrentIndex((index) =>
-                      item.index === index ? null : item.index
-                    )
-                  }
+                <HeroButton
+                  className="px-4 py-2 text-lg"
+                  onClick={() => handleClick(item)}
                 >
                   {curretIndex === item.index ? "Show Less" : "Show More"}
-                </button>
+                </HeroButton>
+                {/* <button
+                  className="bg-cyan-300 text-stone-900 rounded-full "
+                  onClick={() => handleClick(item)}
+                >
+                  
+                </button> */}
               </div>
               {curretIndex === item.index && (
                 <span>
