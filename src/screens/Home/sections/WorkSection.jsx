@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { RiBriefcase2Fill } from "react-icons/ri";
+import { motion } from "motion/react";
+
 import HeroButton from "../Components/HeroButton";
 import { WorkTimeline } from "../../../util/constants";
 
@@ -26,7 +28,12 @@ function WorkSection() {
               {item.start}
             </div>
             <div className="absolute w-3 h-3 bg-[#4f46e5] rounded-full -left-12 top-1.5" />
-            <div className="pl-6 border border-neutral-100 py-4 px-8 rounded-2xl max-w-[800px] w-screen shadow-lg shadow-neutral-100/50">
+            <motion.div
+              whileHover={{
+                y: -10,
+              }}
+              className="pl-6 border border-neutral-100 py-4 px-8 rounded-2xl max-w-[800px] w-screen hover:shadow-lg hover:shadow-neutral-100/50"
+            >
               <h3 className="m-0 text-3xl tracking-wide font-bold text-stone-300">
                 {item.title}
               </h3>
@@ -57,7 +64,7 @@ function WorkSection() {
                   </ul>
                 </span>
               )}
-            </div>
+            </motion.div>
           </div>
         );
       })}

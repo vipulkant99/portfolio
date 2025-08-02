@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Header({ activeSection }) {
+export default function Header({ activeSection, className }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -14,15 +14,21 @@ export default function Header({ activeSection }) {
   }, []);
 
   const navItemClass = (section) =>
-    `text-lg font-inter transition-colors duration-200 ${
+    `text-lg font-inter transition-all duration-200 ease-in-out hover:bg-white/10 hover:p-2 hover:rounded-lg w-auto ${
       activeSection === section
         ? "text-white font-bold"
         : "text-slate-400 hover:text-slate-100"
     }`;
 
+  function onHeaderClick(sectionName) {
+    return document
+      .getElementById(sectionName)
+      ?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration- ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${className} ${
         scrolled
           ? "bg-white/10 shadow backdrop-blur-md  rounded-4xl mx-36 my-6"
           : "bg-black shadow backdrop-blur-md "
@@ -30,7 +36,7 @@ export default function Header({ activeSection }) {
     >
       <div className="mx-auto px-4 py-3 flex justify-between items-center">
         <motion.img
-          className="h-12 w-12 rounded-full m-0.5"
+          className="h-12 w-12 rounded-full m-0.5 cursor-pointer hover:scale-105"
           src="/profile_pic.jpg"
           alt="profilePic"
         />
@@ -38,21 +44,39 @@ export default function Header({ activeSection }) {
           Your Name
         </h1> */}
         <nav className="space-x-8">
-          <a href="#about" className={navItemClass("about")}>
+          <button
+            onClick={() => onHeaderClick("about")}
+            className={navItemClass("about")}
+          >
             About
-          </a>
-          <a href="#education" className={navItemClass("education")}>
+          </button>
+          {/* <a href="#education" className={navItemClass("education")}>
             Education
-          </a>
-          <a href="#experience" className={navItemClass("experience")}>
+          </a> */}
+          <button
+            onClick={() => onHeaderClick("experience")}
+            className={navItemClass("experience")}
+          >
             Experience
-          </a>
-          <a href="#projects" className={navItemClass("projects")}>
+          </button>
+          <button
+            onClick={() => onHeaderClick("projects")}
+            className={navItemClass("projects")}
+          >
             Projects
-          </a>
-          <a href="#hero" className={navItemClass("hero")}>
+          </button>
+          <button
+            onClick={() => onHeaderClick("testimonial")}
+            className={navItemClass("testimonial")}
+          >
+            Testimonials
+          </button>
+          <button
+            onClick={() => onHeaderClick("hero")}
+            className={navItemClass("hero")}
+          >
             Contact
-          </a>
+          </button>
         </nav>
       </div>
     </header>
