@@ -27,21 +27,27 @@ function TestimonialSection() {
                   alt={data.name}
                   className="h-14 w-14 object-contain rounded-full"
                 />
-                <div className="flex flex-col flex-grow justify-center items-start">
-                  <h3 className="ml-4 text-white font-bold font-space-grotesk text-2xl">
-                    {data.name}
-                  </h3>
+                <div className="flex flex-col flex-grow justify-center items-start w-auto">
+                  <div className="flex items-center justify-between">
+                    <h3 className="ml-4 text-white font-bold font-space-grotesk text-2xl">
+                      {data.name}
+                    </h3>
+                    <a
+                      href={data.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/socials/linkedin.svg"
+                        alt={data.name}
+                        className="h-8 w-8 object-contain rounded-full ml-2 cursor-pointer"
+                      />
+                    </a>
+                  </div>
                   <p className="text-neutral-400 pt-1 text-md ml-4 group-hover:mb-4 ">
                     {data.title}
                   </p>
                 </div>
-                <a href={data.link} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src="/socials/linkedin.svg"
-                    alt="aditya"
-                    className="h-8 w-8 object-contain rounded-full ml-2 cursor-pointer"
-                  />
-                </a>
               </div>
             </div>
           ))}

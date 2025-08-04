@@ -244,7 +244,7 @@ export const projectDetails = [
 export const testimonialData = [
   {
     name: "Aditya B Raj Sharma",
-    title: "xxxx at yyyy",
+    title: "Solution Engineer at Cashfree",
     img: "/testmonial/aditya1.jpeg",
     info: "A reliable and skilled Flutter developer, Vipul consistently delivers high-performance, cross-platform apps with seamless backend integration and clean UI/UX. His strong grasp of databases, RESTful APIs, and end-to-end functionality, paired with a collaborative and solution-oriented mindset, makes him a valuable asset to any team.",
     link: "https://www.linkedin.com/in/adityabraj/",

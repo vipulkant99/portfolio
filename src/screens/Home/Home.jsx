@@ -6,6 +6,7 @@ import EducationSection from "./sections/EducationSection";
 import HeroSection from "./sections/HeroSection";
 import ProjectSection from "./sections/ProjectSection";
 import TestimonialSection from "./sections/TestimonialSection";
+import ContactSection from "./sections/ContactSection";
 
 function Home() {
   const [activeSection, setActiveSection] = useState("");
@@ -82,6 +83,13 @@ function Home() {
         <section id="testimonial">
           <TestimonialSection />
         </section>
+        <section id="contact">
+          <ContactSection />
+        </section>
+        <div className="w-full h-0.5 top-0 bg-gradient-to-r from-neutral-900 via-cyan-400 to-neutral-900" />
+        <div className="text-gray-400 bg-neutral-900 p-2 text-xs">
+          © Built from scratch using React & Tailwind by Vipul Kant Chaturvedi
+        </div>
       </div>
     </>
   );

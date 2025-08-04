@@ -39,6 +39,7 @@ export default function Header({ activeSection, className }) {
           className="h-12 w-12 rounded-full m-0.5 cursor-pointer hover:scale-105"
           src="/profile_pic.jpg"
           alt="profilePic"
+          onClick={() => onHeaderClick("hero")}
         />
         {/* <h1 className="text-2xl font-semibold text-slate-100 font-inter">
           Your Name
@@ -72,8 +73,8 @@ export default function Header({ activeSection, className }) {
             Testimonials
           </button>
           <button
-            onClick={() => onHeaderClick("hero")}
-            className={navItemClass("hero")}
+            onClick={() => onHeaderClick("contact")}
+            className={navItemClass("contact")}
           >
             Contact
           </button>
