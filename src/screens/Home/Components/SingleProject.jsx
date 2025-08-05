@@ -2,33 +2,33 @@ import { RiCloseCircleLine } from "react-icons/ri";
 import { AnimatedTooltip } from "./AnimatedTooltip";
 function SingleProject({ currentProject, onClick, ref }) {
   return (
-    <div className="fixed z-10 h-full w-full inset-0 bg-black/50 backdrop-blur-sm overflow-hidden flex items-center justify-center">
+    <div className="fixed inset-0 z-10 flex h-full w-full items-center justify-center overflow-hidden bg-black/50 backdrop-blur-sm">
       <div
         ref={ref}
-        className="w-sm mb-24 flex flex-col items-start justify-start hover:shadow-lg hover:shadow-neutral-400/50 rounded-xl bg-neutral-950"
+        className="mb-24 flex w-sm flex-col items-start justify-start rounded-xl bg-white hover:shadow-lg hover:shadow-neutral-400/50 dark:bg-neutral-950"
       >
         <div className="relative">
           <img
             src={currentProject.image}
             alt={currentProject.title}
-            className="object-fill rounded-xl h-48 w-dvh"
+            className="h-48 w-dvh rounded-xl object-fill"
           />
           <RiCloseCircleLine
             size={32}
             color="#000"
-            className="absolute top-2 right-2 cursor-pointer z-10"
+            className="absolute top-2 right-2 z-10 cursor-pointer"
             onClick={onClick}
           />
         </div>
-        <div className="flex flex-col flex-grow pt-4 mx-4">
-          <h3 className=" text-white font-bold font-space-grotesk text-2xl">
+        <div className="mx-4 flex flex-grow flex-col pt-4">
+          <h3 className="font-space-grotesk text-2xl font-bold text-slate-800 dark:text-white">
             {currentProject.title}
           </h3>
-          <p className="text-neutral-400 pt-2 text-xs ">
+          <p className="pt-2 text-xs text-slate-800 dark:text-neutral-400">
             {currentProject.info}
           </p>
         </div>
-        <div className="my-4 mx-4 flex gap-1">
+        <div className="mx-4 my-4 flex gap-1">
           <AnimatedTooltip items={currentProject.techStack} />
         </div>
         {/* <div className="my-4 mx-4 flex gap-1">

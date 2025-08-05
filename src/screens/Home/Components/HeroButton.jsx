@@ -1,12 +1,16 @@
 import { motion } from "motion/react";
+import { useDarkMode } from "../hook/DarkModeContext";
 
 function HeroButton({ className, children, onClick }) {
+  const { isDark } = useDarkMode();
   return (
     <motion.button
       whileHover={{
         // rotateX: 25,
         // rotateY: 20,
-        boxShadow: "0px 20px 50px rgba(103, 232, 249, 0.3)",
+        boxShadow: isDark
+          ? "0px 20px 50px rgba(103, 232, 249, 0.3)"
+          : "0px 20px 50px rgba(103, 232, 249, 1)",
         y: -20,
       }}
       whileTap={{
@@ -20,14 +24,13 @@ function HeroButton({ className, children, onClick }) {
         ease: "easeInOut",
       }}
       onClick={onClick}
-      className={`group relative text-neutral-500 rounded-lg  bg-black font-bold text-4xl 
-      shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_-1px_2px_0px_rgba(255,255,255,0.1)_inset] ${className}`}
+      className={`group relative rounded-lg bg-black text-4xl font-bold text-neutral-500 shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_-1px_2px_0px_rgba(255,255,255,0.1)_inset] ${className}`}
     >
-      <span className="group-hover:text-cyan-300 transition-colors duration-300 font-space-grotesk">
+      <span className="font-space-grotesk transition-colors duration-300 group-hover:text-cyan-300">
         {children}
       </span>
-      <span className="absolute inset-x-0 bottom-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent h-px w-3/4 mx-auto"></span>
-      <span className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 inset-x-0 bottom-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent h-[4px] w-full mx-auto blur-sm"></span>
+      <span className="absolute inset-x-0 bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-cyan-300 to-transparent"></span>
+      <span className="absolute inset-x-0 bottom-px mx-auto h-[4px] w-full bg-gradient-to-r from-transparent via-cyan-300 to-transparent opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100"></span>
     </motion.button>
   );
 }

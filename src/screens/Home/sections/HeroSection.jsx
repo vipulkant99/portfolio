@@ -17,16 +17,21 @@ function HeroSection() {
   ];
 
   return (
-    <BackgroundGradient className="bg-neutral-900 h-3/4 flex items-center justify-center rounded-[22px] p-12">
+    <BackgroundGradient className="flex h-3/4 items-center justify-center rounded-[22px] bg-neutral-100 p-12 dark:bg-neutral-900">
       <div className="flex flex-col items-center">
         <TypewriterEffectSmooth words={words} />
         {/* <span className="text-8xl text-stone-300 tracking-wide text-shadow-lg text-shadow-white/50">
           Vipul Kant Chaturvedi
         </span> */}
-        <span className="pt-16 text-4xl">
-          <ContainerTextFlip />
-        </span>
-        <HeroButton className="px-8 py-2 mt-8 text-3xl">
+        <ContainerTextFlip />
+        <HeroButton
+          className="mt-8 px-8 py-2 text-3xl"
+          onClick={() =>
+            document
+              .getElementById("about")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
           Let's Explore
         </HeroButton>
       </div>

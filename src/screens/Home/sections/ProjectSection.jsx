@@ -7,9 +7,11 @@ import { ScrollAnimation } from "../../ScrollAnimation";
 import { projectDetails } from "../../../util/constants";
 import SingleProject from "../Components/SingleProject";
 import { useOutsideClick } from "../hook/useOutsideClick";
+import { useDarkMode } from "../hook/DarkModeContext";
 
 function ProjectSection({ currentProject, setCurrentProject }) {
   const ref = useRef(null);
+  const { isDark } = useDarkMode();
   //const id = useId();
 
   useEffect(() => {
@@ -27,7 +29,7 @@ function ProjectSection({ currentProject, setCurrentProject }) {
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [currentProject]);
+  }, [currentProject, setCurrentProject]);
 
   useOutsideClick(ref, () => setCurrentProject(null));
 
@@ -39,7 +41,7 @@ function ProjectSection({ currentProject, setCurrentProject }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 h-full w-full z-10"
+            className="fixed inset-0 z-10 h-full w-full bg-black/20"
           />
         )}
       </AnimatePresence>
@@ -54,39 +56,39 @@ function ProjectSection({ currentProject, setCurrentProject }) {
       </AnimatePresence>
       <div
         id="projects"
-        className="relative bg-black overflow-hidden flex flex-col"
+        className="relative flex flex-col overflow-hidden bg-white dark:bg-black"
       >
         <ScrollAnimation>
-          <div className="text-slate-300 flex gap-8 items-center justify-center mx-16 mt-28">
-            <IoRocketOutline size={64} color="#fff" />
-            <h1 className="text-6xl underline text-slate-300  font-space-grotesk tracking-wide">
+          <div className="mx-16 mt-28 flex items-center justify-center gap-8">
+            <IoRocketOutline size={64} color={isDark ? "white" : "black"} />
+            <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
               Projects
             </h1>
           </div>
-          <div className="grid grid-cols-3 gap-2 mt-20">
+          <div className="mt-20 grid grid-cols-3 gap-2">
             {projectDetails.map((project) => {
               return (
                 <div
                   onClick={() => setCurrentProject(project)}
-                  className="group w-sm mb-12 flex flex-col items-start justify-start hover:shadow-lg hover:shadow-neutral-400/50 hover:rounded-xl mx-16 cursor-pointer"
+                  className="group mx-16 mb-12 flex w-sm cursor-pointer flex-col items-start justify-start hover:rounded-xl hover:shadow-md hover:shadow-neutral-800/50 dark:hover:shadow-neutral-400/50"
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="object-fill transform-3d transition duration-300 group-hover:scale-102 group-hover:scale-3d rounded-xl h-48 w-dvh"
+                    className="h-48 w-dvh rounded-xl object-fill transition duration-300 transform-3d group-hover:scale-102 group-hover:scale-3d"
                   />
-                  <div className="flex flex-col flex-grow pt-4">
-                    <h3 className="group-hover:ml-4 text-white font-bold font-space-grotesk text-2xl">
+                  <div className="flex flex-grow flex-col pt-4">
+                    <h3 className="font-space-grotesk text-2xl font-bold text-black group-hover:ml-4 dark:text-white">
                       {project.title}
                     </h3>
-                    <p className="text-neutral-400 pt-2 text-xs group-hover:ml-4 group-hover:mb-4 ">
+                    <p className="pt-2 text-xs text-slate-800 group-hover:mb-4 group-hover:ml-4 dark:text-neutral-400">
                       {project.info}
                     </p>
                   </div>
                   <div className="mt-auto pt-4">
                     <HeroButton
                       onClick={() => setCurrentProject(project)}
-                      className="px-4 py-2 text-lg mt-auto group-hover:ml-4 group-hover:mb-4 cursor-pointer"
+                      className="mt-auto cursor-pointer px-4 py-2 text-lg group-hover:mb-4 group-hover:ml-4"
                     >
                       Show More
                     </HeroButton>

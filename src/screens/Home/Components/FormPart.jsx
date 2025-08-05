@@ -4,10 +4,10 @@ function FormPart() {
   return (
     <div className="ml-16">
       <form>
-        <div className="flex flex-col items-start justify-start w-full">
+        <div className="flex w-full flex-col items-start justify-start">
           <label
             htmlFor="name"
-            className="text-neutral-300 mb-2 font-semibold font-inter"
+            className="font-inter mb-2 font-semibold text-slate-800 dark:text-neutral-300"
           >
             Name
           </label>
@@ -15,13 +15,13 @@ function FormPart() {
             type="text"
             id="name"
             placeholder="Enter Your Name"
-            className="text-white placeholder:text-neutral-500 border border-neutral-600 rounded-md px-4 py-2 outline-none focus:border-cyan-300 w-3/4"
+            className="w-3/4 rounded-md border-2 border-neutral-600 px-4 py-2 text-black outline-none placeholder:text-neutral-500 focus:border-cyan-600 dark:border-2 dark:text-white dark:focus:border-cyan-300"
           />
         </div>
-        <div className="flex flex-col items-start justify-start w-full mt-8">
+        <div className="mt-8 flex w-full flex-col items-start justify-start">
           <label
             htmlFor="email"
-            className="text-neutral-300 mb-2 font-semibold font-inter"
+            className="font-inter mb-2 font-semibold text-slate-800 dark:text-neutral-300"
           >
             Email
           </label>
@@ -29,13 +29,13 @@ function FormPart() {
             type="email"
             id="email"
             placeholder="Enter Your Email"
-            className="text-white placeholder:text-neutral-500 border border-neutral-600 rounded-md px-4 py-2 outline-none focus:border-cyan-300 w-3/4"
+            className="w-3/4 rounded-md border-2 border-neutral-600 px-4 py-2 text-black outline-none placeholder:text-neutral-500 focus:border-cyan-600 dark:text-white dark:focus:border-cyan-300"
           />
         </div>
-        <div className="flex flex-col items-start justify-start w-full mt-8">
+        <div className="mt-8 flex w-full flex-col items-start justify-start">
           <label
             htmlFor="subject"
-            className="text-neutral-300 mb-2 font-semibold font-inter"
+            className="font-inter mb-2 font-semibold text-slate-800 dark:text-neutral-300"
           >
             Subject
           </label>
@@ -43,13 +43,13 @@ function FormPart() {
             type="text"
             id="subject"
             placeholder="What it is about?"
-            className="text-white placeholder:text-neutral-500 border border-neutral-600 rounded-md px-4 py-2 outline-none focus:border-cyan-300 w-3/4"
+            className="w-3/4 rounded-md border-2 border-neutral-600 px-4 py-2 text-black outline-none placeholder:text-neutral-500 focus:border-cyan-600 dark:text-white dark:focus:border-cyan-300"
           />
         </div>
-        <div className="flex flex-col items-start justify-start w-full mt-6">
+        <div className="mt-6 flex w-full flex-col items-start justify-start">
           <label
             htmlFor="message"
-            className="text-neutral-300 mb-2 font-semibold font-inter"
+            className="font-inter mb-2 font-semibold text-slate-800 dark:text-neutral-300"
           >
             Message
           </label>
@@ -57,12 +57,12 @@ function FormPart() {
             id="message"
             rows={6}
             placeholder="Enter Your Message Here...."
-            className="text-white placeholder:text-neutral-500 border border-neutral-600 rounded-md px-4 py-2 outline-none focus:border-cyan-300 w-3/4"
+            className="w-3/4 rounded-md border-2 border-neutral-600 px-4 py-2 text-black outline-none placeholder:text-neutral-500 focus:border-cyan-600 dark:text-white dark:focus:border-cyan-300"
           />
         </div>
         <HeroButton
           // onClick={() => setCurrentProject(project)}
-          className="px-4 py-2 text-lg mt-10 cursor-pointer"
+          className="mt-10 cursor-pointer px-4 py-2 text-lg"
         >
           Send Message
         </HeroButton>

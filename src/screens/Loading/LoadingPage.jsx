@@ -15,7 +15,7 @@ function LoadingPage() {
   }, [navigate]);
 
   return (
-    <div className="relative bg-black h-screen overflow-hidden flex items-center justify-center">
+    <div className="relative flex h-screen items-center justify-center overflow-hidden bg-white dark:bg-black">
       <div className="absolute inset-0">
         <Meteors number={100} />
       </div>

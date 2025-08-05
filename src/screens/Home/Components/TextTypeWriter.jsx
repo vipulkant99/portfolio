@@ -1,11 +1,7 @@
 import { motion, stagger, useAnimate, useInView } from "motion/react";
 import { useEffect } from "react";
 
-export const TypewriterEffectSmooth = ({
-  words,
-  className,
-  cursorClassName,
-}) => {
+export const TypewriterEffectSmooth = ({ words }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {
@@ -22,7 +18,7 @@ export const TypewriterEffectSmooth = ({
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className="text-8xl text-white tracking-wide text-shadow-lg text-shadow-white/20"
+                  className="text-8xl tracking-wide text-neutral-800 text-shadow-lg text-shadow-white/20 dark:text-white"
                   //word.className
                 >
                   {char}
@@ -38,7 +34,7 @@ export const TypewriterEffectSmooth = ({
 
   return (
     <div
-      className="flex space-x-1 my-6"
+      className="my-6 flex space-x-1"
       //className
     >
       <motion.div
@@ -56,7 +52,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="lg:text:3xl text-xs font-bold sm:text-base md:text-xl xl:text-5xl"
           style={{
             whiteSpace: "nowrap",
           }}
@@ -77,7 +73,7 @@ export const TypewriterEffectSmooth = ({
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className="block rounded-sm w-[4px]  h-24 sm:h-24 xl:h-24 bg-cyan-300"
+        className="block h-24 w-[4px] rounded-sm bg-cyan-300 sm:h-24 xl:h-24"
         //cursorClassName
       ></motion.span>
     </div>

@@ -4,9 +4,11 @@ import { motion } from "motion/react";
 
 import HeroButton from "../Components/HeroButton";
 import { WorkTimeline } from "../../../util/constants";
+import { useDarkMode } from "../hook/DarkModeContext";
 
 function WorkSection() {
   const [curretIndex, setCurrentIndex] = useState(null);
+  const { isDark } = useDarkMode();
 
   function handleClick(item) {
     setCurrentIndex((index) => (item.index === index ? null : item.index));
@@ -14,31 +16,31 @@ function WorkSection() {
   return (
     <div id="experience">
       {/* Work Experience */}
-      <div className="flex gap-8 items-center justify-center">
+      <div className="flex items-center justify-center gap-8">
         {/* div Education */}
-        <RiBriefcase2Fill size={64} color="white" />
-        <h1 className="text-6xl underline text-slate-300  font-space-grotesk tracking-wide">
+        <RiBriefcase2Fill size={64} color={isDark ? "white" : "black"} />
+        <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
           Work Experience
         </h1>
       </div>
       {WorkTimeline.map((item) => {
         return (
-          <div className="relative mb-10 ml-4 flex items-start mt-16">
-            <div className="absolute -left-30 -top-2 text-3xl text-right w-12 font-semibold text-stone-200">
+          <div className="relative mt-16 mb-10 ml-4 flex items-start">
+            <div className="absolute -top-2 -left-30 w-12 text-right text-3xl font-semibold text-slate-800 dark:text-stone-200">
               {item.start}
             </div>
-            <div className="absolute w-3 h-3 bg-[#4f46e5] rounded-full -left-12 top-1.5" />
+            <div className="absolute top-1.5 -left-12 h-3 w-3 rounded-full bg-[#4f46e5]" />
             <motion.div
               whileHover={{
                 y: -10,
               }}
-              className="pl-6 border border-neutral-100 py-4 px-8 rounded-2xl max-w-[800px] w-screen hover:shadow-lg hover:shadow-neutral-100/50"
+              className="w-screen max-w-[800px] rounded-2xl border border-neutral-800 px-8 py-4 pl-6 hover:shadow-md hover:shadow-neutral-800/50 dark:border-neutral-100 dark:hover:shadow-neutral-100/50"
             >
-              <h3 className="m-0 text-3xl tracking-wide font-bold text-stone-300">
+              <h3 className="m-0 text-3xl font-bold tracking-wide text-slate-800 dark:text-stone-300">
                 {item.title}
               </h3>
               <div className="flex items-center justify-between">
-                <p className="my-1 text-lg text-gray-200">
+                <p className="my-1 text-base text-slate-800 dark:text-gray-200">
                   {item.company}, {item.time}
                 </p>
                 <HeroButton
@@ -56,8 +58,8 @@ function WorkSection() {
               </div>
               {curretIndex === item.index && (
                 <span>
-                  <div className="border border-gray-100 mt-8" />
-                  <ul className="list-disc list-inside text-slate-200 space-y-2 mt-8">
+                  <div className="mt-8 border border-gray-100" />
+                  <ul className="mt-8 list-inside list-disc space-y-2 text-slate-200">
                     {item.content.map((desc) => {
                       return <li>{desc}</li>;
                     })}
