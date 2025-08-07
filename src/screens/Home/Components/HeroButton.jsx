@@ -18,13 +18,14 @@ function HeroButton({ className, children, onClick }) {
       }}
       style={{
         translateZ: 100,
+        willChange: "transform, opacity",
       }}
       transition={{
         duration: 0.3,
         ease: "easeInOut",
       }}
       onClick={onClick}
-      className={`group relative rounded-lg bg-black text-4xl font-bold text-neutral-500 shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_-1px_2px_0px_rgba(255,255,255,0.1)_inset] ${className}`}
+      className={`group relative rounded-lg bg-black font-bold text-neutral-500 shadow-[0px_1px_2px_0px_rgba(255,255,255,0.1)_inset,0px_-1px_2px_0px_rgba(255,255,255,0.1)_inset] ${className}`}
     >
       <span className="font-space-grotesk transition-colors duration-300 group-hover:text-cyan-300">
         {children}

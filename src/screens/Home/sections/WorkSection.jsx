@@ -23,9 +23,12 @@ function WorkSection() {
           Work Experience
         </h1>
       </div>
-      {WorkTimeline.map((item) => {
+      {WorkTimeline.map((item, index) => {
         return (
-          <div className="relative mt-16 mb-10 ml-4 flex items-start">
+          <div
+            key={index}
+            className="relative mt-16 mb-10 ml-4 flex items-start"
+          >
             <div className="absolute -top-2 -left-30 w-12 text-right text-3xl font-semibold text-slate-800 dark:text-stone-200">
               {item.start}
             </div>
@@ -34,12 +37,12 @@ function WorkSection() {
               whileHover={{
                 y: -10,
               }}
-              className="w-screen max-w-[800px] rounded-2xl border border-neutral-800 px-8 py-4 pl-6 hover:shadow-md hover:shadow-neutral-800/50 dark:border-neutral-100 dark:hover:shadow-neutral-100/50"
+              className="w-full max-w-3xl rounded-2xl border border-neutral-800 px-8 py-4 pl-6 hover:shadow-md hover:shadow-neutral-800/50 dark:border-neutral-100 dark:hover:shadow-neutral-100/50"
             >
               <h3 className="m-0 text-3xl font-bold tracking-wide text-slate-800 dark:text-stone-300">
                 {item.title}
               </h3>
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <p className="my-1 text-base text-slate-800 dark:text-gray-200">
                   {item.company}, {item.time}
                 </p>
@@ -49,17 +52,11 @@ function WorkSection() {
                 >
                   {curretIndex === item.index ? "Show Less" : "Show More"}
                 </HeroButton>
-                {/* <button
-                  className="bg-cyan-300 text-stone-900 rounded-full "
-                  onClick={() => handleClick(item)}
-                >
-                  
-                </button> */}
               </div>
               {curretIndex === item.index && (
                 <span>
                   <div className="mt-8 border border-gray-100" />
-                  <ul className="mt-8 list-inside list-disc space-y-2 text-slate-200">
+                  <ul className="mt-6 list-inside list-disc space-y-2 text-slate-800 dark:text-slate-200">
                     {item.content.map((desc) => {
                       return <li>{desc}</li>;
                     })}

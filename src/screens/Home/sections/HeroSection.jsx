@@ -17,15 +17,18 @@ function HeroSection() {
   ];
 
   return (
-    <BackgroundGradient className="flex h-3/4 items-center justify-center rounded-[22px] bg-neutral-100 p-12 dark:bg-neutral-900">
-      <div className="flex flex-col items-center">
-        <TypewriterEffectSmooth words={words} />
-        {/* <span className="text-8xl text-stone-300 tracking-wide text-shadow-lg text-shadow-white/50">
-          Vipul Kant Chaturvedi
-        </span> */}
-        <ContainerTextFlip />
+    <BackgroundGradient className="flex w-full items-center justify-center rounded-[22px] bg-neutral-100 px-4 py-12 dark:bg-neutral-900">
+      <div className="flex w-full max-w-screen-xl flex-col items-center px-4 text-center sm:px-6 md:px-8">
+        <div className="w-full break-words">
+          <TypewriterEffectSmooth words={words} />
+        </div>
+
+        <div className="w-full overflow-x-auto">
+          <ContainerTextFlip />
+        </div>
+
         <HeroButton
-          className="mt-8 px-8 py-2 text-3xl"
+          className="mt-8 px-6 py-2 text-xl sm:text-2xl md:text-3xl"
           onClick={() =>
             document
               .getElementById("about")
@@ -35,11 +38,6 @@ function HeroSection() {
           Let's Explore
         </HeroButton>
       </div>
-      {/* <img
-        src="/profile_pic.jpg"
-        alt="profilePic"
-        className="h-1/2 w-1/4 rounded-4xl"
-      /> */}
     </BackgroundGradient>
   );
 }

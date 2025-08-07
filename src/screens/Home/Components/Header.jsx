@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useDarkMode } from "../hook/DarkModeContext";
-import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
+import { HiMenu, HiOutlineMoon, HiOutlineSun, HiX } from "react-icons/hi";
 
 export default function Header({ activeSection, className }) {
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const { isDark, toggleDarkMode } = useDarkMode();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,9 +34,9 @@ export default function Header({ activeSection, className }) {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${className} ${
+      className={`fixed top-0 right-0 left-0 z-50 px-4 transition-all duration-300 ${className} ${
         scrolled
-          ? "mx-36 my-6 rounded-4xl bg-white/10 shadow backdrop-blur-md"
+          ? "mx-2 my-2 rounded-4xl bg-white/10 shadow backdrop-blur-md sm:mx-12 sm:my-4"
           : "bg-white shadow backdrop-blur-md dark:bg-black"
       }`}
     >
@@ -49,7 +50,67 @@ export default function Header({ activeSection, className }) {
         {/* <h1 className="text-2xl font-semibold text-slate-100 font-inter">
           Your Name
         </h1> */}
-        <nav className="space-x-8">
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? (
+              <HiX size={24} className={isDark ? "text-white" : "text-black"} />
+            ) : (
+              <HiMenu
+                size={24}
+                className={isDark ? "text-white" : "text-black"}
+              />
+            )}
+          </button>
+        </div>
+
+        <nav className="hidden items-center space-x-8 md:flex">
+          <button onClick={toggleDarkMode}>
+            {isDark ? (
+              <HiOutlineSun color="white" size={20} />
+            ) : (
+              <HiOutlineMoon color="black" size={20} />
+            )}
+          </button>
+          {["about", "experience", "projects", "testimonial", "contact"].map(
+            (section) => (
+              <button
+                key={section}
+                onClick={() => onHeaderClick(section)}
+                className={navItemClass(section)}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            ),
+          )}
+        </nav>
+
+        {menuOpen && (
+          <div className="absolute top-full left-0 flex w-full flex-col space-y-4 bg-white p-4 shadow-md md:hidden dark:bg-black">
+            <button onClick={toggleDarkMode} className="self-end">
+              {isDark ? (
+                <HiOutlineSun color="white" size={20} />
+              ) : (
+                <HiOutlineMoon color="black" size={20} />
+              )}
+            </button>
+            {["about", "experience", "projects", "testimonial", "contact"].map(
+              (section) => (
+                <button
+                  key={section}
+                  onClick={() => {
+                    onHeaderClick(section);
+                    setMenuOpen(false);
+                  }}
+                  className={navItemClass(section)}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </button>
+              ),
+            )}
+          </div>
+        )}
+
+        {/* <nav className="space-x-8">
           <button onClick={toggleDarkMode}>
             {isDark ? (
               <HiOutlineSun color="white" size={20} />
@@ -63,9 +124,6 @@ export default function Header({ activeSection, className }) {
           >
             About
           </button>
-          {/* <a href="#education" className={navItemClass("education")}>
-            Education
-          </a> */}
           <button
             onClick={() => onHeaderClick("experience")}
             className={navItemClass("experience")}
@@ -90,7 +148,7 @@ export default function Header({ activeSection, className }) {
           >
             Contact
           </button>
-        </nav>
+        </nav> */}
       </div>
     </header>
   );

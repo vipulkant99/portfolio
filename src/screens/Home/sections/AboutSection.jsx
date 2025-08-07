@@ -12,16 +12,16 @@ function AboutSection() {
   return (
     <div
       id="about"
-      className="relative flex h-screen flex-col overflow-hidden bg-white dark:bg-black"
+      className="relative flex min-h-screen flex-col overflow-hidden bg-white dark:bg-black"
     >
       <ScrollAnimation>
-        <div className="mx-16 mt-28 flex items-center justify-center gap-8 text-slate-800 dark:text-slate-300">
+        <div className="mt-28 flex items-center justify-center gap-8 px-4 text-slate-800 sm:px-8 md:px-16 dark:text-slate-300">
           <BsPersonCircle size={64} color={isDark ? "white" : "black"} />
           <h1 className="font-space-grotesk text-6xl tracking-wide underline">
             About
           </h1>
         </div>
-        <p className="font-inter mt-8 mr-42 ml-40 text-center text-slate-800 dark:text-slate-300">
+        <p className="font-inter mt-8 px-4 text-center text-slate-800 sm:px-12 md:px-20 dark:text-slate-300">
           Software Developer with 2+ years of experience building scalable
           cross-platform mobile applications using Flutter and Dart. Proficient
           in backend development with Node.js, REST API design, and cloud
@@ -36,16 +36,13 @@ function AboutSection() {
           id="skills"
           className="mx-16 mt-16 flex items-center justify-center gap-8 text-slate-800 dark:text-slate-300"
         >
-          <AiOutlineTool size={50} color="white" />
-          <h1 className="font-space-grotesk text-6xl tracking-wide underline">
+          <AiOutlineTool size={50} color={isDark ? "white" : "black"} />
+          <h1 className="font-space-grotesk text-center text-6xl tracking-wide underline">
             Technical Skills
           </h1>
         </div>
-        {/* <div className="bg-white flex w-fit items-center gap-2 p-2 rounded-2xl">
-        <img src="/techstack/github.svg" alt="aa" className="h-10 w-10" />
-        <h3 className="font-space-grotesk text-2xl"> Github</h3>
-        </div> */}
-        <div className="relative mx-auto mt-10 flex w-fit flex-col items-center justify-center overflow-hidden rounded-md antialiased">
+
+        <div className="relative mt-10 flex w-full flex-col items-center justify-center overflow-hidden rounded-md antialiased">
           <MovingCards items={TechStacks} direction="right" speed="medium" />
           <MovingCards items={TechStacks} direction="left" speed="medium" />
         </div>

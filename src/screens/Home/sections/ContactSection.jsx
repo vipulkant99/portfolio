@@ -7,6 +7,8 @@ import RedditButton from "../SocialButtons/RedditButton";
 import DiscordButton from "../SocialButtons/DiscordButton";
 import UpworkButton from "../SocialButtons/UpworkButton";
 import { useDarkMode } from "../hook/DarkModeContext";
+import ResumeButton from "../SocialButtons/ResumeButton";
+import GoogleButton from "../SocialButtons/GoogleButton";
 
 function ContactSection() {
   const { isDark } = useDarkMode();
@@ -35,7 +37,9 @@ function ContactSection() {
             <GithubButton />
             <RedditButton />
             <DiscordButton />
+            <GoogleButton />
             <UpworkButton />
+            <ResumeButton />
           </div>
         </div>
       </ScrollAnimation>

@@ -59,36 +59,36 @@ function ProjectSection({ currentProject, setCurrentProject }) {
         className="relative flex flex-col overflow-hidden bg-white dark:bg-black"
       >
         <ScrollAnimation>
-          <div className="mx-16 mt-28 flex items-center justify-center gap-8">
+          <div className="mt-28 flex items-center justify-center gap-4 px-4 text-center sm:gap-8 sm:px-8 lg:px-16">
             <IoRocketOutline size={64} color={isDark ? "white" : "black"} />
-            <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
+            <h1 className="font-space-grotesk text-3xl tracking-wide text-slate-800 underline sm:text-4xl md:text-5xl lg:text-6xl dark:text-slate-300">
               Projects
             </h1>
           </div>
-          <div className="mt-20 grid grid-cols-3 gap-2">
-            {projectDetails.map((project) => {
+          <div className="mt-20 grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-3">
+            {projectDetails.map((project, index) => {
               return (
                 <div
                   onClick={() => setCurrentProject(project)}
-                  className="group mx-16 mb-12 flex w-sm cursor-pointer flex-col items-start justify-start hover:rounded-xl hover:shadow-md hover:shadow-neutral-800/50 dark:hover:shadow-neutral-400/50"
+                  className="group mx-auto mb-12 flex w-full max-w-[400px] cursor-pointer flex-col items-start justify-start hover:rounded-xl hover:shadow-md hover:shadow-neutral-800/50 dark:hover:shadow-neutral-400/50"
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-48 w-dvh rounded-xl object-fill transition duration-300 transform-3d group-hover:scale-102 group-hover:scale-3d"
+                    className="h-48 w-dvh rounded-xl object-fill px-4 py-2 transition duration-300 transform-3d group-hover:scale-102 group-hover:scale-3d"
                   />
                   <div className="flex flex-grow flex-col pt-4">
-                    <h3 className="font-space-grotesk text-2xl font-bold text-black group-hover:ml-4 dark:text-white">
+                    <h3 className="font-space-grotesk px-4 py-2 text-2xl font-bold text-black group-hover:ml-4 dark:text-white">
                       {project.title}
                     </h3>
-                    <p className="pt-2 text-xs text-slate-800 group-hover:mb-4 group-hover:ml-4 dark:text-neutral-400">
+                    <p className="mb-1 px-4 py-2 text-xs text-slate-800 group-hover:mb-4 group-hover:ml-4 dark:text-neutral-400">
                       {project.info}
                     </p>
                   </div>
-                  <div className="mt-auto pt-4">
+                  <div className="mt-auto">
                     <HeroButton
-                      onClick={() => setCurrentProject(project)}
-                      className="mt-auto cursor-pointer px-4 py-2 text-lg group-hover:mb-4 group-hover:ml-4"
+                      key={index}
+                      className="mt-auto mb-4 cursor-pointer px-4 py-2 text-lg group-hover:ml-4"
                     >
                       Show More
                     </HeroButton>

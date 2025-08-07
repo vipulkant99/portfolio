@@ -14,8 +14,9 @@ export function ContainerTextFlip({
   const updateWidthForWord = () => {
     if (textRef.current) {
       // Add some padding to the text width (30px on each side)
-      // @ts-ignore
-      const textWidth = textRef.current.scrollWidth + 30;
+      const screenWidth = window.innerWidth;
+      const padding = screenWidth < 640 ? 10 : screenWidth < 1024 ? 20 : 30;
+      const textWidth = textRef.current.scrollWidth + padding;
       setWidth(textWidth);
     }
   };
@@ -40,7 +41,7 @@ export function ContainerTextFlip({
       layoutId={`words-here-${id}`}
       animate={{ width }}
       transition={{ duration: animationDuration / 2000 }}
-      className="relative inline-block rounded-2xl pt-2 pb-3 text-center text-4xl font-bold text-black shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db] md:text-7xl dark:text-white dark:shadow-[inset_0_-1px_#10171e,inset_0_0_0_1px_hsla(205,89%,46%,.24),_0_4px_8px_#00000052]"
+      className="relative inline-block rounded-2xl pt-2 pb-3 text-center text-base font-bold text-black shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db] sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl dark:text-white dark:shadow-[inset_0_-1px_#10171e,inset_0_0_0_1px_hsla(205,89%,46%,.24),_0_4px_8px_#00000052]"
       key={words[currentWordIndex]}
     >
       <motion.div

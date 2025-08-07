@@ -18,7 +18,7 @@ export const TypewriterEffectSmooth = ({ words }) => {
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className="text-8xl tracking-wide text-neutral-800 text-shadow-lg text-shadow-white/20 dark:text-white"
+                  className="text-3xl tracking-wide text-neutral-800 text-shadow-lg text-shadow-white/20 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl dark:text-white"
                   //word.className
                 >
                   {char}
@@ -34,7 +34,7 @@ export const TypewriterEffectSmooth = ({ words }) => {
 
   return (
     <div
-      className="my-6 flex space-x-1"
+      className="my-6 flex flex-wrap items-center justify-center"
       //className
     >
       <motion.div
@@ -52,7 +52,7 @@ export const TypewriterEffectSmooth = ({ words }) => {
         }}
       >
         <div
-          className="lg:text:3xl text-xs font-bold sm:text-base md:text-xl xl:text-5xl"
+          className="font-bold"
           style={{
             whiteSpace: "nowrap",
           }}
@@ -73,7 +73,8 @@ export const TypewriterEffectSmooth = ({ words }) => {
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className="block h-24 w-[4px] rounded-sm bg-cyan-300 sm:h-24 xl:h-24"
+        className="ml-2 block h-8 w-[3px] rounded-sm bg-cyan-300 sm:h-10 md:h-20"
+        // className="block h-24 w-[4px] rounded-sm bg-cyan-300"
         //cursorClassName
       ></motion.span>
     </div>

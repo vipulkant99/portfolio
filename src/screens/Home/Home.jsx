@@ -21,7 +21,6 @@ function Home() {
     const observers = [];
 
     sections.forEach((id) => {
-      console.log(id);
       const element = document.getElementById(id);
       if (!element) return;
 

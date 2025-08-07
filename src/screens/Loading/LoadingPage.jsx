@@ -17,10 +17,10 @@ function LoadingPage() {
   return (
     <div className="relative flex h-screen items-center justify-center overflow-hidden bg-white dark:bg-black">
       <div className="absolute inset-0">
-        <Meteors number={100} />
+        <Meteors number={window.innerWidth < 640 ? 30 : 100} />
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 px-4 sm:px-6 md:px-8">
         <GlitchLoader />
       </div>
     </div>
