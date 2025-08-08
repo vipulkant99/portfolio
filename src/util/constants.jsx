@@ -271,11 +271,11 @@ export const testimonialData = [
     link: "https://www.linkedin.com/in/adityabraj/",
   },
   {
-    name: "Aditya B Raj Sharma",
-    title: "xxxx at yyyy",
-    img: "/testmonial/aditya1.jpeg",
-    info: "A reliable and skilled Flutter developer, Vipul consistently delivers high-performance, cross-platform apps with seamless backend integration and clean UI/UX. His strong grasp of databases, RESTful APIs, and end-to-end functionality, paired with a collaborative and solution-oriented mindset, makes him a valuable asset to any team.",
-    link: "https://www.linkedin.com/in/adityabraj/",
+    name: "Shubhangi Kumari",
+    title: "Associate Consultant at Capgemini",
+    img: "/testmonial/shubhangi.jpeg",
+    info: "I’ve had the privilege of working alongside Vipul Kant Chaturvedi, a highly skilled and versatile Flutter Developer and Full Stack Developer, and I can confidently say that he is an exceptional professional with a rare combination of technical expertise and team-oriented mindset. His dedication, attention to detail, and ability to adapt quickly to new technologies have made him an invaluable asset to our team. Any organization would be fortunate to have someone of Vipul’s caliber, and I look forward to seeing the great things he continues to accomplish.",
+    link: "https://www.linkedin.com/in/shubhangi-kumari-399732214/",
   },
   {
     name: "Vishalsingh Rajput",

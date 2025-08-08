@@ -10,7 +10,7 @@ function FormPart() {
 
   function onSubmit(data) {
     console.log(data);
-    sendMail(data, { onSettled: () => reset });
+    sendMail(data, { onSettled: () => reset() });
   }
   function onError(errors) {}
 
