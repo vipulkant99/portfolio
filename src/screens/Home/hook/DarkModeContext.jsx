@@ -31,15 +31,4 @@ function DarkModeProvider({ children }) {
   );
 }
 
-function useDarkMode() {
-  const context = useContext(DarkModeContext);
-
-  if (context === undefined) {
-    throw new Error("DarkModeContext used outside of DarkModeProvider");
-  }
-
-  return context;
-}
-
-// eslint-disable-next-line react-refresh/only-export-components
-export { DarkModeProvider, useDarkMode };
+export { DarkModeProvider, DarkModeContext };

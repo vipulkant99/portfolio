@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useDarkMode } from "../hook/DarkModeContext";
 import { HiMenu, HiOutlineMoon, HiOutlineSun, HiX } from "react-icons/hi";
+import { useDarkMode } from "../hook/useDarkMode";
 
 export default function Header({ activeSection, className }) {
   const [scrolled, setScrolled] = useState(false);

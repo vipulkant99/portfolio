@@ -4,7 +4,7 @@ import { TbTool } from "react-icons/tb";
 import { MovingCards } from "../Components/MovingCards";
 import { TechStacks } from "../../../util/constants";
 import { ScrollAnimation } from "../../ScrollAnimation";
-import { useDarkMode } from "../hook/DarkModeContext";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function AboutSection() {
   const { isDark } = useDarkMode();

@@ -6,9 +6,9 @@ import GithubButton from "../SocialButtons/GithubButton";
 import RedditButton from "../SocialButtons/RedditButton";
 import DiscordButton from "../SocialButtons/DiscordButton";
 import UpworkButton from "../SocialButtons/UpworkButton";
-import { useDarkMode } from "../hook/DarkModeContext";
 import ResumeButton from "../SocialButtons/ResumeButton";
 import GoogleButton from "../SocialButtons/GoogleButton";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function ContactSection() {
   const { isDark } = useDarkMode();

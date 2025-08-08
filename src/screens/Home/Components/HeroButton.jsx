@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useDarkMode } from "../hook/DarkModeContext";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function HeroButton({ className, children, onClick }) {
   const { isDark } = useDarkMode();

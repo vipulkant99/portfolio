@@ -1,9 +1,9 @@
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import { ScrollAnimation } from "../../ScrollAnimation";
 import { testimonialData } from "../../../util/constants";
-import { useDarkMode } from "../hook/DarkModeContext";
 
 import { motion } from "motion/react";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function TestimonialSection() {
   const { isDark } = useDarkMode();

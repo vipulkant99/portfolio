@@ -8,8 +8,8 @@ import ProjectSection from "./sections/ProjectSection";
 import TestimonialSection from "./sections/TestimonialSection";
 import ContactSection from "./sections/ContactSection";
 import { HiArrowNarrowUp } from "react-icons/hi";
-import { useDarkMode } from "./hook/DarkModeContext";
 import FooterSection from "./sections/FooterSection";
+import { useDarkMode } from "./hook/useDarkMode";
 
 function Home() {
   const [activeSection, setActiveSection] = useState("");

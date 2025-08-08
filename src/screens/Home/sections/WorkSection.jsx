@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 import HeroButton from "../Components/HeroButton";
 import { WorkTimeline } from "../../../util/constants";
-import { useDarkMode } from "../hook/DarkModeContext";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function WorkSection() {
   const [curretIndex, setCurrentIndex] = useState(null);

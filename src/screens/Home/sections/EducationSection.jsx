@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 import WorkSection from "./WorkSection";
 import { EducationTimeline } from "../../../util/constants";
 import { ScrollAnimation } from "../../ScrollAnimation";
-import { useDarkMode } from "../hook/DarkModeContext";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function EducationSection() {
   const { isDark } = useDarkMode();

@@ -7,7 +7,7 @@ import { ScrollAnimation } from "../../ScrollAnimation";
 import { projectDetails } from "../../../util/constants";
 import SingleProject from "../Components/SingleProject";
 import { useOutsideClick } from "../hook/useOutsideClick";
-import { useDarkMode } from "../hook/DarkModeContext";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function ProjectSection({ currentProject, setCurrentProject }) {
   const ref = useRef(null);

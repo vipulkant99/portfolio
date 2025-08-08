@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi2";
 import { IoNewspaperOutline } from "react-icons/io5";
-import { useDarkMode } from "../hook/DarkModeContext";
+import { useDarkMode } from "../hook/useDarkMode";
 
 function ResumeButton() {
   const { isDark } = useDarkMode();
