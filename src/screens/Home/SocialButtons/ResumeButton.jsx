@@ -12,7 +12,7 @@ function ResumeButton() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="group mt-4 flex w-3/4 items-start justify-start rounded-xl border border-neutral-600 px-2 py-3 transition duration-300 transform-3d hover:scale-101 hover:shadow-lg hover:shadow-gray-400 dark:hover:shadow-gray-400/50">
+      <div className="group mt-4 flex w-full items-start justify-start rounded-xl border border-neutral-600 px-2 py-3 transition duration-300 transform-3d hover:scale-101 hover:shadow-lg hover:shadow-gray-400 md:w-3/4 dark:hover:shadow-gray-400/50">
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center justify-center">
             <div

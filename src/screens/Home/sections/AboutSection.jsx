@@ -34,9 +34,9 @@ function AboutSection() {
         </p>
         <div
           id="skills"
-          className="mx-16 mt-16 flex items-center justify-center gap-8 text-slate-800 dark:text-slate-300"
+          className="mx-16 mt-16 flex flex-wrap items-center justify-center gap-8 text-slate-800 dark:text-slate-300"
         >
-          <AiOutlineTool size={50} color={isDark ? "white" : "black"} />
+          <AiOutlineTool size={64} color={isDark ? "white" : "black"} />
           <h1 className="font-space-grotesk text-center text-6xl tracking-wide underline">
             Technical Skills
           </h1>

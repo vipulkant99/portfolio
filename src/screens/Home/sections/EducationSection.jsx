@@ -21,7 +21,7 @@ function EducationSection() {
         <div className="mt-28 mb-8 flex flex-col items-center justify-center gap-8 px-4 sm:px-8 md:px-16">
           <div className="relative border-l-2 border-gray-800 pl-6 dark:border-gray-300">
             {/*timeline line*/}
-            <div className="flex items-center justify-center gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               {/* div Education */}
               <HiOutlineAcademicCap
                 size={64}
@@ -35,9 +35,9 @@ function EducationSection() {
               return (
                 <div
                   key={index}
-                  className="relative mt-16 mb-10 ml-4 flex items-start"
+                  className="relative mt-16 mb-10 ml-4 flex flex-col items-start md:flex md:flex-row"
                 >
-                  <div className="absolute -top-2 -left-30 w-12 text-right text-3xl font-semibold text-slate-800 dark:text-stone-200">
+                  <div className="mb-4 text-3xl font-semibold text-slate-800 md:absolute md:-top-1 md:-left-30 md:mb-0 md:w-12 md:text-right md:text-3xl dark:text-stone-200">
                     {item.start}
                   </div>
                   <div className="absolute top-2 -left-12 h-4 w-4 rounded-full bg-indigo-600" />

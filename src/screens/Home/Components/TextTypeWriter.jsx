@@ -34,7 +34,7 @@ export const TypewriterEffectSmooth = ({ words }) => {
 
   return (
     <div
-      className="my-6 flex flex-wrap items-center justify-center"
+      className="my-6 flex flex-wrap items-baseline justify-center"
       //className
     >
       <motion.div
@@ -73,7 +73,7 @@ export const TypewriterEffectSmooth = ({ words }) => {
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className="ml-2 block h-8 w-[3px] rounded-sm bg-cyan-300 sm:h-10 md:h-20"
+        className="block h-8 w-[3px] rounded-sm bg-cyan-300 sm:h-10 md:h-20"
         // className="block h-24 w-[4px] rounded-sm bg-cyan-300"
         //cursorClassName
       ></motion.span>

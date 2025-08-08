@@ -3,6 +3,8 @@ import { ScrollAnimation } from "../../ScrollAnimation";
 import { testimonialData } from "../../../util/constants";
 import { useDarkMode } from "../hook/DarkModeContext";
 
+import { motion } from "motion/react";
+
 function TestimonialSection() {
   const { isDark } = useDarkMode();
 
@@ -12,7 +14,7 @@ function TestimonialSection() {
       className="relative flex flex-col overflow-hidden bg-white dark:bg-black"
     >
       <ScrollAnimation>
-        <div className="mx-16 mt-28 flex items-center justify-center gap-8 text-slate-300">
+        <div className="mx-4 mt-28 flex flex-wrap items-center justify-center gap-4 text-slate-300 sm:mx-8 sm:mt-24 sm:gap-8 lg:mx-16">
           <HiOutlineChatBubbleLeftRight
             size={64}
             color={isDark ? "white" : "black"}
@@ -21,20 +23,25 @@ function TestimonialSection() {
             Testimonials
           </h1>
         </div>
-        <div className="mt-16 mb-12 grid grid-cols-3 gap-2">
+        <div className="mt-10 mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((data) => (
-            <div className="group mx-8 my-6 flex w-md flex-col items-start justify-start hover:rounded-xl hover:shadow-md hover:shadow-neutral-800/50 dark:hover:shadow-neutral-400/50">
-              <h4 className="font-inter text-md font-light text-slate-800 group-hover:ml-4 dark:text-white">
+            <motion.div
+              whileHover={{
+                y: -10,
+              }}
+              className="group relative mx-8 my-6 flex flex-col items-start justify-start hover:z-10 hover:rounded-xl hover:shadow-md hover:shadow-neutral-800/50 dark:hover:shadow-neutral-400/50"
+            >
+              <h4 className="font-inter text-md ml-4 font-light text-slate-800 dark:text-white">
                 {data.info}
               </h4>
-              <div className="mt-auto flex items-start pt-4 group-hover:ml-4">
+              <div className="mt-auto ml-4 flex items-start pt-4">
                 <img
                   src={data.img}
                   alt={data.name}
-                  className="h-14 w-14 rounded-full object-contain"
+                  className="h-12 w-12 rounded-full object-contain sm:h-14 sm:w-14"
                 />
                 <div className="flex w-auto flex-grow flex-col items-start justify-center">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-nowrap items-center gap-2 overflow-hidden">
                     <h3 className="font-space-grotesk ml-4 text-2xl font-bold text-slate-800 dark:text-white">
                       {data.name}
                     </h3>
@@ -42,6 +49,7 @@ function TestimonialSection() {
                       href={data.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="mr-2 shrink-0"
                     >
                       <img
                         src="/socials/linkedin.svg"
@@ -50,12 +58,12 @@ function TestimonialSection() {
                       />
                     </a>
                   </div>
-                  <p className="text-md font-inter ml-4 pt-1 text-neutral-400 group-hover:mb-4">
+                  <p className="text-md font-inter mb-4 ml-4 pt-1 text-neutral-400">
                     {data.title}
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </ScrollAnimation>

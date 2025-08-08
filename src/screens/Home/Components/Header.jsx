@@ -66,9 +66,16 @@ export default function Header({ activeSection, className }) {
         <nav className="hidden items-center space-x-8 md:flex">
           <button onClick={toggleDarkMode}>
             {isDark ? (
-              <HiOutlineSun color="white" size={20} />
+              <div className="flex items-center justify-center hover:rounded-full hover:bg-black hover:p-2 dark:hover:bg-white/10">
+                <HiOutlineSun color="white" size={20} />
+              </div>
             ) : (
-              <HiOutlineMoon color="black" size={20} />
+              <div className="group flex items-center justify-center hover:rounded-full hover:bg-black hover:p-2 dark:hover:bg-white/10">
+                <HiOutlineMoon
+                  className="text-black group-hover:text-white"
+                  size={20}
+                />
+              </div>
             )}
           </button>
           {["about", "experience", "projects", "testimonial", "contact"].map(
@@ -85,8 +92,11 @@ export default function Header({ activeSection, className }) {
         </nav>
 
         {menuOpen && (
-          <div className="absolute top-full left-0 flex w-full flex-col space-y-4 bg-white p-4 shadow-md md:hidden dark:bg-black">
-            <button onClick={toggleDarkMode} className="self-end">
+          <div className="absolute top-full left-0 flex w-full flex-col space-y-4 bg-white pb-4 shadow-md md:hidden dark:bg-black">
+            <button
+              onClick={toggleDarkMode}
+              className="mt-4 flex items-center justify-center"
+            >
               {isDark ? (
                 <HiOutlineSun color="white" size={20} />
               ) : (

@@ -19,17 +19,22 @@ function ContactSection() {
       className="relative flex flex-col overflow-hidden bg-white dark:bg-black"
     >
       <ScrollAnimation>
-        <div className="mx-16 mt-16 flex items-center justify-center gap-8 text-slate-300">
-          <HiOutlineMail size={64} color={isDark ? "white" : "black"} />
+        <div className="mx-4 mt-16 flex flex-col items-center justify-center gap-4 text-slate-300 md:mx-16 md:flex-row md:gap-8">
+          <HiOutlineMail
+            size={48}
+            className="md:size-[64px]"
+            color={isDark ? "white" : "black"}
+          />
           <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
             Contact
           </h1>
         </div>
-        <div className="mt-16 mb-12 grid grid-cols-[1fr_1px_1fr] gap-2">
+        <div className="mt-16 mb-12 grid grid-cols-1 gap-6 md:grid-cols-[1fr_1px_1fr]">
           <FormPart />
-          <div className="h-full w-[1px] bg-gradient-to-b from-neutral-900 via-cyan-400 to-neutral-900"></div>
-          <div className="ml-16">
-            <p className="w-3/4 text-xl tracking-tight text-slate-800 dark:text-neutral-400">
+          <div className="hidden h-full w-[1px] bg-gradient-to-b from-neutral-900 via-cyan-400 to-neutral-900 md:block"></div>
+          <div className="block h-[1px] w-full bg-gradient-to-r from-neutral-900 via-cyan-400 to-neutral-900 md:hidden"></div>
+          <div className="mr-4 ml-4 md:ml-16">
+            <p className="w-full text-lg tracking-tight text-slate-800 md:w-3/4 md:text-xl dark:text-neutral-400">
               I’m open to exciting new opportunities. Got a question or just
               want to connect? Feel free to click that button and reach out!
             </p>

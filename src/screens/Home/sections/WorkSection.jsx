@@ -16,7 +16,7 @@ function WorkSection() {
   return (
     <div id="experience">
       {/* Work Experience */}
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex flex-wrap items-center justify-center gap-4 text-center">
         {/* div Education */}
         <RiBriefcase2Fill size={64} color={isDark ? "white" : "black"} />
         <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
@@ -27,9 +27,9 @@ function WorkSection() {
         return (
           <div
             key={index}
-            className="relative mt-16 mb-10 ml-4 flex items-start"
+            className="relative mt-16 mb-10 ml-4 flex flex-col items-start md:flex md:flex-row"
           >
-            <div className="absolute -top-2 -left-30 w-12 text-right text-3xl font-semibold text-slate-800 dark:text-stone-200">
+            <div className="mb-4 text-3xl font-semibold text-slate-800 md:absolute md:-top-1 md:-left-30 md:mb-0 md:w-12 md:text-right md:text-3xl dark:text-stone-200">
               {item.start}
             </div>
             <div className="absolute top-1.5 -left-12 h-3 w-3 rounded-full bg-[#4f46e5]" />

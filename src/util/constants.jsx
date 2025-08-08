@@ -264,10 +264,10 @@ export const testimonialData = [
     link: "https://www.linkedin.com/in/varunpatel06/",
   },
   {
-    name: "Aditya B Raj Sharma",
-    title: "xxxx at yyyy",
-    img: "/testmonial/aditya1.jpeg",
-    info: "A reliable and skilled Flutter developer, Vipul consistently delivers high-performance, cross-platform apps with seamless backend integration and clean UI/UX. His strong grasp of databases, RESTful APIs, and end-to-end functionality, paired with a collaborative and solution-oriented mindset, makes him a valuable asset to any team.",
+    name: "eSparse Matrix solutions Private Limited",
+    title: "",
+    img: "/testmonial/esparse.png",
+    info: "During his tenure from February 2022 to February 2024, Vipul played a key role in developing and publishing mobile applications for both Google Play and App Store. His expertise in Flutter, Firebase integration, and API collaboration consistently elevated our projects.",
     link: "https://www.linkedin.com/in/adityabraj/",
   },
   {
@@ -278,10 +278,10 @@ export const testimonialData = [
     link: "https://www.linkedin.com/in/adityabraj/",
   },
   {
-    name: "Aditya B Raj Sharma",
-    title: "xxxx at yyyy",
-    img: "/testmonial/aditya1.jpeg",
-    info: "A reliable and skilled Flutter developer, Vipul consistently delivers high-performance, cross-platform apps with seamless backend integration and clean UI/UX. His strong grasp of databases, RESTful APIs, and end-to-end functionality, paired with a collaborative and solution-oriented mindset, makes him a valuable asset to any team.",
+    name: "Vishalsingh Rajput",
+    title: "Director at eSparse Matrix solutions Private Limited",
+    img: "/testmonial/vishal.jpeg",
+    info: "Working with Vipul was a pleasure — his problem-solving skills, adaptability, and dedication stood out in every project. He approached challenges with creativity and delivered high-quality results on time.",
     link: "https://www.linkedin.com/in/adityabraj/",
   },
 ];

@@ -9,6 +9,7 @@ import TestimonialSection from "./sections/TestimonialSection";
 import ContactSection from "./sections/ContactSection";
 import { HiArrowNarrowUp } from "react-icons/hi";
 import { useDarkMode } from "./hook/DarkModeContext";
+import FooterSection from "./sections/FooterSection";
 
 function Home() {
   const [activeSection, setActiveSection] = useState("");
@@ -35,7 +36,7 @@ function Home() {
           }
         },
         {
-          threshold: 0.6,
+          threshold: window.innerWidth < 640 ? 0.3 : 0.6,
         },
       );
 
@@ -57,7 +58,7 @@ function Home() {
             : ""
         }`}
       ></div>
-      <div className={isDark ? "dark" : ""}>
+      <div className={isDark ? "dark bg-white dark:bg-black" : ""}>
         <Header
           className={`${currentProject ? "hidden" : ""}`}
           activeSection={activeSection}
@@ -65,7 +66,7 @@ function Home() {
         <div>
           <section
             id="hero"
-            className="flex h-screen items-center justify-center bg-white dark:bg-black"
+            className="flex min-h-screen items-center justify-center bg-white sm:h-screen dark:bg-black"
           >
             <HeroSection />
           </section>
@@ -90,20 +91,17 @@ function Home() {
           <section id="contact">
             <ContactSection />
           </section>
-          <div className="top-0 h-0.5 w-full bg-gradient-to-r from-neutral-900 via-cyan-400 to-neutral-900" />
-          <div className="bg-neutral-100 p-2 text-xs text-slate-800 dark:bg-neutral-900 dark:text-gray-400">
-            © Built from scratch using React & Tailwind by Vipul Kant
-            Chaturvedi
-          </div>
+          {isTop && (
+            <div
+              className="fixed right-6 bottom-6 z-[9999] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-neutral-900 p-1 sm:h-16 sm:w-16"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <HiArrowNarrowUp size={36} color="white" />
+            </div>
+          )}
+          <div className="top-0 z-0 h-0.5 w-full bg-gradient-to-r from-neutral-900 via-cyan-400 to-neutral-900" />
+          <FooterSection />
         </div>
-        {isTop && (
-          <div
-            className="fixed right-6 bottom-6 z-50 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-neutral-900 p-1"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            <HiArrowNarrowUp size={36} color="white" />
-          </div>
-        )}
       </div>
     </>
   );
