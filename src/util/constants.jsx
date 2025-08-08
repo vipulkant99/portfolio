@@ -282,6 +282,6 @@ export const testimonialData = [
     title: "Director at eSparse Matrix solutions Private Limited",
     img: "/testmonial/vishal.jpeg",
     info: "Working with Vipul was a pleasure — his problem-solving skills, adaptability, and dedication stood out in every project. He approached challenges with creativity and delivered high-quality results on time.",
-    link: "https://www.linkedin.com/in/adityabraj/",
+    link: "https://www.linkedin.com/in/vishalsingh-rajput-651a9925/",
   },
 ];
