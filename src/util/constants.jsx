@@ -268,7 +268,7 @@ export const testimonialData = [
     title: "",
     img: "/testmonial/esparse.png",
     info: "During his tenure from February 2022 to February 2024, Vipul played a key role in developing and publishing mobile applications for both Google Play and App Store. His expertise in Flutter, Firebase integration, and API collaboration consistently elevated our projects.",
-    link: "https://www.linkedin.com/in/adityabraj/",
+    link: "https://www.linkedin.com/company/sparse-matrix-solutions/posts/?feedView=all",
   },
   {
     name: "Shubhangi Kumari",
