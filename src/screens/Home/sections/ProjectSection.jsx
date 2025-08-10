@@ -59,9 +59,9 @@ function ProjectSection({ currentProject, setCurrentProject }) {
         className="relative flex flex-col overflow-hidden bg-white dark:bg-black"
       >
         <ScrollAnimation>
-          <div className="mt-28 flex items-center justify-center gap-4 px-4 text-center sm:gap-8 sm:px-8 lg:px-16">
-            <IoRocketOutline size={64} color={isDark ? "white" : "black"} />
-            <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
+          <div className="mt-28 flex flex-wrap items-center justify-center gap-2 px-4 text-center sm:px-8 lg:px-16">
+            <IoRocketOutline className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
+            <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
               Projects
             </h1>
           </div>

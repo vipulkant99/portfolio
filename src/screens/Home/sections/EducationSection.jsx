@@ -23,11 +23,8 @@ function EducationSection() {
             {/*timeline line*/}
             <div className="flex flex-wrap items-center justify-center gap-2">
               {/* div Education */}
-              <HiOutlineAcademicCap
-                size={64}
-                color={isDark ? "white" : "black"}
-              />
-              <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
+              <HiOutlineAcademicCap className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
+              <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
                 Education
               </h1>
             </div>

@@ -36,7 +36,7 @@ export default function Header({ activeSection, className }) {
     <header
       className={`fixed top-0 right-0 left-0 z-50 px-4 transition-all duration-300 ${className} ${
         scrolled
-          ? "mx-2 my-2 rounded-4xl bg-white/10 shadow backdrop-blur-md sm:mx-12 sm:my-4"
+          ? "mx-2 my-1 rounded-4xl bg-white/10 shadow backdrop-blur-md sm:mx-12 sm:my-4"
           : "bg-white shadow backdrop-blur-md dark:bg-black"
       }`}
     >

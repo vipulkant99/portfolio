@@ -19,13 +19,9 @@ function ContactSection() {
       className="relative flex flex-col overflow-hidden bg-white dark:bg-black"
     >
       <ScrollAnimation>
-        <div className="mx-4 mt-16 flex flex-col items-center justify-center gap-4 text-slate-300 md:mx-16 md:flex-row md:gap-8">
-          <HiOutlineMail
-            size={48}
-            className="md:size-[64px]"
-            color={isDark ? "white" : "black"}
-          />
-          <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
+        <div className="mx-4 mt-16 flex flex-wrap items-center justify-center gap-2 md:mx-16">
+          <HiOutlineMail className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
+          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
             Contact
           </h1>
         </div>

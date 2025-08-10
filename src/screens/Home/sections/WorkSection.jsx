@@ -16,10 +16,10 @@ function WorkSection() {
   return (
     <div id="experience">
       {/* Work Experience */}
-      <div className="flex flex-wrap items-center justify-center gap-4 text-center">
+      <div className="flex flex-wrap items-center justify-center gap-2 text-center">
         {/* div Education */}
-        <RiBriefcase2Fill size={64} color={isDark ? "white" : "black"} />
-        <h1 className="font-space-grotesk text-6xl tracking-wide text-slate-800 underline dark:text-slate-300">
+        <RiBriefcase2Fill className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
+        <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
           Work Experience
         </h1>
       </div>

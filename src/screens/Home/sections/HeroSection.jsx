@@ -12,7 +12,7 @@ function HeroSection() {
       text: "Kant",
     },
     {
-      text: "Chaturvedi.",
+      text: "Chaturvedi",
     },
   ];
 

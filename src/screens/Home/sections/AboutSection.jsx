@@ -1,6 +1,5 @@
 import { AiOutlineTool } from "react-icons/ai";
 import { BsPersonCircle } from "react-icons/bs";
-import { TbTool } from "react-icons/tb";
 import { MovingCards } from "../Components/MovingCards";
 import { TechStacks } from "../../../util/constants";
 import { ScrollAnimation } from "../../ScrollAnimation";
@@ -15,9 +14,9 @@ function AboutSection() {
       className="relative flex min-h-screen flex-col overflow-hidden bg-white dark:bg-black"
     >
       <ScrollAnimation>
-        <div className="mt-28 flex items-center justify-center gap-8 px-4 text-slate-800 sm:px-8 md:px-16 dark:text-slate-300">
-          <BsPersonCircle size={64} color={isDark ? "white" : "black"} />
-          <h1 className="font-space-grotesk text-6xl tracking-wide underline">
+        <div className="mt-28 flex flex-wrap items-center justify-center gap-2 px-4 sm:px-8 md:px-16">
+          <BsPersonCircle className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
+          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
             About
           </h1>
         </div>
@@ -34,10 +33,10 @@ function AboutSection() {
         </p>
         <div
           id="skills"
-          className="mx-16 mt-16 flex flex-wrap items-center justify-center gap-8 text-slate-800 dark:text-slate-300"
+          className="mx-16 mt-16 flex flex-wrap items-center justify-center gap-2"
         >
-          <AiOutlineTool size={64} color={isDark ? "white" : "black"} />
-          <h1 className="font-space-grotesk text-center text-6xl tracking-wide underline">
+          <AiOutlineTool className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
+          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
             Technical Skills
           </h1>
         </div>

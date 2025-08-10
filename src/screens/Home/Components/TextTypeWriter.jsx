@@ -34,7 +34,7 @@ export const TypewriterEffectSmooth = ({ words }) => {
 
   return (
     <div
-      className="my-6 flex flex-wrap items-baseline justify-center"
+      className="my-6 flex flex-wrap items-baseline-last justify-center"
       //className
     >
       <motion.div

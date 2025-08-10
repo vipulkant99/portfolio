@@ -4,6 +4,7 @@ import Home from "./screens/Home/Home";
 import { DarkModeProvider } from "./screens/Home/hook/DarkModeContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
+import PageNotFound from "./screens/PageNotFound";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LoadingPage />} />
             <Route path="/home" element={<Home />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
         <Toaster
