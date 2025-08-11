@@ -10,7 +10,7 @@ export async function clientMail(formData) {
     body: formData,
   });
 
-  console.log(data, error);
+  console.log(error);
 
   return { data, error };
 }

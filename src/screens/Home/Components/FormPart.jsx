@@ -9,7 +9,6 @@ function FormPart() {
   const { sendMail, isPending } = useClientMail();
 
   function onSubmit(data) {
-    console.log(data);
     sendMail(data, { onSettled: () => reset() });
   }
   function onError(errors) {}
@@ -28,6 +27,7 @@ function FormPart() {
             type="text"
             id="name"
             placeholder="Enter Your Name"
+            disabled={isPending}
             {...register("name", { required: "This field is required" })}
             className="w-full rounded-md border-2 border-neutral-600 px-4 py-2 text-black outline-none placeholder:text-neutral-500 focus:border-cyan-600 md:w-3/4 dark:border-2 dark:text-white dark:focus:border-cyan-300"
           />
@@ -45,6 +45,7 @@ function FormPart() {
           <input
             type="email"
             id="email"
+            disabled={isPending}
             placeholder="Enter Your Email"
             {...register("email", {
               required: "This field is required",
@@ -69,6 +70,7 @@ function FormPart() {
           <input
             type="text"
             id="subject"
+            disabled={isPending}
             placeholder="What it is about?"
             {...register("subject", { required: "This field is required" })}
             className="w-full rounded-md border-2 border-neutral-600 px-4 py-2 text-black outline-none placeholder:text-neutral-500 focus:border-cyan-600 md:w-3/4 dark:text-white dark:focus:border-cyan-300"
@@ -89,6 +91,7 @@ function FormPart() {
           <textarea
             id="message"
             rows={6}
+            disabled={isPending}
             placeholder="Enter Your Message Here...."
             {...register("message", { required: "This field is required" })}
             className="w-full rounded-md border-2 border-neutral-600 px-4 py-2 text-black outline-none placeholder:text-neutral-500 focus:border-cyan-600 md:w-3/4 dark:text-white dark:focus:border-cyan-300"
@@ -102,8 +105,9 @@ function FormPart() {
         <HeroButton
           // onClick={() => setCurrentProject(project)}
           className="mt-6 cursor-pointer px-4 py-2 text-lg md:mt-10"
+          disabled={isPending}
         >
-          Send Message
+          {isPending ? "Loading..." : "Send Message"}
         </HeroButton>
       </form>
     </div>
