@@ -9,6 +9,7 @@ import UpworkButton from "../SocialButtons/UpworkButton";
 import ResumeButton from "../SocialButtons/ResumeButton";
 import GoogleButton from "../SocialButtons/GoogleButton";
 import { useDarkMode } from "../hook/useDarkMode";
+import XButton from "../SocialButtons/XButton";
 
 function ContactSection() {
   const { isDark } = useDarkMode();
@@ -35,6 +36,7 @@ function ContactSection() {
               want to connect? Feel free to click that button and reach out!
             </p>
             <LinkedinButton />
+            <XButton />
             <GithubButton />
             <RedditButton />
             <DiscordButton />
