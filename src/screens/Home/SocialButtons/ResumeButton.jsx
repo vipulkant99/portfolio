@@ -8,7 +8,7 @@ function ResumeButton() {
 
   return (
     <a
-      href="https://drive.google.com/file/d/1P81uLlYohNEHERYm8j6pZRq9-qubouHu/view"
+      href="/resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
     >
