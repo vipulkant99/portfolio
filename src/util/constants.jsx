@@ -1,3 +1,6 @@
+import { FaGithub, FaUpwork } from "react-icons/fa6";
+import { IoNewspaperOutline } from "react-icons/io5";
+
 export const TechStacks = [
   {
     name: "Dart",
@@ -71,39 +74,51 @@ export const EducationTimeline = [
     start: "2017",
     time: "2017 - 2020",
     degree: "Bachelor's Of Computer Applications (BCA)",
+    company: "GLA University",
   },
   {
     start: "2020",
     time: "2020 - 2022",
     degree: "Masters's Of Computer Applications (MCA)",
+    company: "GLA University",
   },
 ];
 
 export const WorkTimeline = [
   {
     index: 0,
-    start: "2021",
-    time: "August 2021 - January 2022",
-    company: "Freelance",
-    title: "Mobile Application Developer",
+    start: "2025",
+    time: "September 2025 – Present",
+    company: "HouzeGuru Technologies Pvt. Ltd. ",
+    title: "Software Consultant",
     content: [
-      "Designed and built a mobile app for IoT-based green roof plantation monitoring.",
-      "Integrated real-time sensor data (e.g., moisture, temperature) using Firebase Realtime Database.",
-      "Visualized live environmental metrics within the app through dynamic, user-friendly dashboards.",
-      "Implemented Firebase Authentication for secure, end-to-end access with email/password login and session handling.",
+      "Developing cross-platform mobile applications using Flutter for iOS and Android.",
+      "Building backend services using Node.js with PostgreSQL and REST API integrations.",
+      "Collaborating with product and tech teams using GitHub-based workflows.",
     ],
   },
   {
     index: 1,
+    start: "2024",
+    time: "February 2024 – September 2025",
+    company: "Freelance Software Developer & Technical Upskilling",
+    title: "Freelance",
+    content: [
+      "Prepared for the GATE examination while strengthening core computer science fundamentals.",
+      "Worked with small organizations and individual clients on short-term Flutter and backend development work.",
+      "Built full-stack applications using Flutter, Node.js, and databases, and explored GenAI integrations to enhance application functionality.",
+    ],
+  },
+  {
+    index: 2,
     start: "2022",
     time: "February 2022 – February 2024",
     company: "ESPARSE MATRIX SOLUTIONS PVT LTD",
     title: "Junior Flutter Developer",
     content: [
-      "Led end-to-end development of mobile applications integrating Firebase Authentication, Storage, and cloud functions.",
-      "Published and maintained 2+ apps on App Store and Google Play Store.",
-      "Integrated and prototyped Agora Video Calling API; discontinued due to technical challenges",
-      "Collaborated with backend teams to ensure seamless API integration and real-time data synchronization.",
+      "Developed production-grade Flutter applications with Firebase integrations.",
+      "Published and maintained apps on Google Play Store and Apple App Store.",
+      "Integrated REST APIs for real-time data synchronization.",
     ],
   },
 ];
@@ -283,5 +298,64 @@ export const testimonialData = [
     img: "/testmonial/vishal.jpeg",
     info: "Working with Vipul was a pleasure — his problem-solving skills, adaptability, and dedication stood out in every project. He approached challenges with creativity and delivered high-quality results on time.",
     link: "https://www.linkedin.com/in/vishalsingh-rajput-651a9925/",
+  },
+];
+
+export const socials = [
+  {
+    title: "Linkedin",
+    description: "in/vipul-99",
+    href: "https://www.linkedin.com/in/vipul-99/",
+    icon: <img src="/socials/linkedin.svg" alt="Linkedin" className="h-12 w-12 object-contain" />,
+    color: "from-blue-600/10",
+  },
+  {
+    title: "X",
+    description: "@vipulkant99",
+    href: "https://x.com/vipulkant99",
+    icon: <img src="/socials/x.svg" alt="X" className="h-12 w-12 object-contain dark:invert" />,
+    color: "from-neutral-900/80",
+  },
+  {
+    title: "Github",
+    description: "vipulkant99",
+    href: "https://github.com/vipulkant99",
+    icon: <FaGithub className="h-12 w-12" />,
+    color: "from-neutral-900/80",
+  },
+  {
+    title: "Reddit",
+    description: "u/MrStark-_-7",
+    href: "https://www.reddit.com/user/MrStark-_-7/",
+    icon: <img src="/socials/reddit.svg" alt="Reddit" className="h-12 w-12 object-contain" />,
+    color: "from-orange-600/10",
+  },
+  {
+    title: "Discord",
+    description: "stark._.7",
+    href: "https://discord.com/users/687695105544814684",
+    icon: <img src="/socials/discord.svg" alt="Discord" className="h-12 w-12 object-contain" />,
+    color: "from-indigo-600/10",
+  },
+  {
+    title: "Google",
+    description: "vcvedi99@gmail.com",
+    href: "mailto:vcvedi99@gmail.com",
+    icon: <img src="/socials/google.svg" alt="Google" className="h-12 w-12 object-contain" />,
+    color: "from-yellow-500/10",
+  },
+  {
+    title: "Upwork",
+    description: "Vipul Kant C.",
+    href: "https://www.upwork.com/freelancers/~016f063fc2fc12fedc",
+    icon: <FaUpwork className="h-12 w-12 text-green-500" />,
+    color: "from-green-600/10",
+  },
+  {
+    title: "Resume",
+    description: "Download PDF",
+    href: "/resume.pdf",
+    icon: <IoNewspaperOutline className="h-12 w-12" />,
+    color: "from-slate-600/10",
   },
 ];

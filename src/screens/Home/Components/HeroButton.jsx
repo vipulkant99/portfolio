@@ -9,9 +9,9 @@ function HeroButton({ className, children, onClick, disabled }) {
         !disabled
           ? {
               boxShadow: isDark
-                ? "0px 20px 50px rgba(103, 232, 249, 0.3)"
-                : "0px 20px 50px rgba(103, 232, 249, 1)",
-              y: -20,
+                ? "0px 10px 25px rgba(103, 232, 249, 0.3)"
+                : "0px 10px 25px rgba(103, 232, 249, 0.8)",
+              //y: -20,
             }
           : {}
       }

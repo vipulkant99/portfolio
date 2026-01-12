@@ -15,8 +15,8 @@ function AboutSection() {
     >
       <ScrollAnimation>
         <div className="mt-28 flex flex-wrap items-center justify-center gap-2 px-4 sm:px-8 md:px-16">
-          <BsPersonCircle className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
-          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
+          <BsPersonCircle className="h-16 w-16 text-indigo-600 sm:h-20 sm:w-20 dark:text-indigo-400" />
+          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-100">
             About
           </h1>
         </div>
@@ -35,8 +35,8 @@ function AboutSection() {
           id="skills"
           className="mx-16 mt-16 flex flex-wrap items-center justify-center gap-2"
         >
-          <AiOutlineTool className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
-          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
+          <AiOutlineTool className="h-16 w-16 text-indigo-600 sm:h-20 sm:w-20 dark:text-indigo-400" />
+          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-100">
             Technical Skills
           </h1>
         </div>

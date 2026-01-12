@@ -21,8 +21,8 @@ function ContactSection() {
     >
       <ScrollAnimation>
         <div className="mx-4 mt-16 flex flex-wrap items-center justify-center gap-2 md:mx-16">
-          <HiOutlineMail className="h-16 w-16 text-black sm:h-20 sm:w-20 dark:text-white" />
-          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 underline sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-300">
+          <HiOutlineMail className="h-16 w-16 text-indigo-600 sm:h-20 sm:w-20 dark:text-indigo-400" />
+          <h1 className="font-space-grotesk text-center text-3xl tracking-normal text-slate-800 sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl dark:text-slate-100">
             Contact
           </h1>
         </div>

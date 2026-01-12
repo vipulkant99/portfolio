@@ -9,6 +9,7 @@ import TestimonialSection from "./sections/TestimonialSection";
 import ContactSection from "./sections/ContactSection";
 import { HiArrowNarrowUp } from "react-icons/hi";
 import FooterSection from "./sections/FooterSection";
+import SocialGridSection from "./sections/SocialGridSection";
 import { useDarkMode } from "./hook/useDarkMode";
 
 function Home() {
@@ -88,9 +89,14 @@ function Home() {
           <section id="testimonial">
             <TestimonialSection />
           </section>
+
           <section id="contact">
-            <ContactSection />
+            <SocialGridSection />
           </section>
+
+          {/* <section id="contact">
+            <ContactSection />
+          </section> */}
           {isTop && (
             <div
               className="fixed right-6 bottom-6 z-[9999] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-neutral-900 p-1 sm:h-16 sm:w-16"
